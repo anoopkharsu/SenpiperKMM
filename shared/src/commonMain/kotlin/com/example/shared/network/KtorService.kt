@@ -12,15 +12,13 @@ class KtorService(
     private val baseUrl: String
 ) {
 
-    suspend fun fetchCompanyAuthConfig(subDomain: String): SPResult {
-
+    suspend fun fetchCompanyConfig(domainName: String): SPResult {
         return client.get {
             url {
                 takeFrom(baseUrl)
-                appendPathSegments("api", "core", "companies", "config", subDomain)
+                appendPathSegments("api/core/companies/config", domainName)
             }
         }.body()
-
     }
 
 }

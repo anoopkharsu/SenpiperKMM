@@ -105,7 +105,7 @@ fun EnterCompanyBottomBar(baseurl: String,spResult: (SPResult) -> Unit) {
 
                 coroutineScope.launch {
                     try {
-                        result = KtorService?.fetchCompanyAuthConfig(baseUrlName)
+                        result = KtorService?.fetchCompanyConfig(baseUrlName)
                         println("API Success: ${result?.response}")
                         if (result != null) {
                             spResult(result!!)
