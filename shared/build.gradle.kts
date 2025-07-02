@@ -57,7 +57,7 @@ kotlin {
     // https://developer.android.com/kotlin/multiplatform/migrate
     val xcf = XCFramework()
     listOf(
-//        iosX64(),
+        iosX64(),
         iosArm64(),
         iosSimulatorArm64()
     ).forEach {
@@ -135,6 +135,6 @@ dependencies {
     ksp(libs.room.compiler)
     add("kspAndroid", libs.room.compiler)
     add("kspIosSimulatorArm64", libs.room.compiler)
-//    add("kspIosX64", libs.room.compiler)
+    add("kspIosX64", libs.room.compiler)
     add("kspIosArm64", libs.room.compiler)
 }
