@@ -1,0 +1,10 @@
+# Kotlin Multiplatform
+.gradle/
+/build/
+**/build/
+.idea/
+*.iml
+local.properties
+.DS_Store
+*.log
+java_pid86922.hprof
