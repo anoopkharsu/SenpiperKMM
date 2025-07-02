@@ -3,7 +3,7 @@ package com.example.shared.network
 import com.example.shared.models.SPResult
 import com.senpiper.android.network.KtorClientFactory
 
-object SPNetwork {
+object KMMSPNetwork {
 
     private val client = KtorClientFactory().createClient()
     private var ktorService: KtorService? = null
