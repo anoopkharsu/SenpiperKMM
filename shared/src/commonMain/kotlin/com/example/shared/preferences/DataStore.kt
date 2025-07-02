@@ -16,9 +16,12 @@ internal expect fun createDataStore(): DataStore<Preferences>
 
 // You can create a singleton holder to easily access the DataStore from anywhere
 // in your common code.
-object AppDataStore {
+class AppDataStore private constructor() {
     val dataStore: DataStore<Preferences> by lazy {
         createDataStore()
+    }
+    companion object {
+        val instance: AppDataStore by lazy { AppDataStore() }
     }
 }
 

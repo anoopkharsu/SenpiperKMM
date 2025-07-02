@@ -9,8 +9,10 @@ class UserDefaults {
     // Get the DataStore instance from our singleton
     private val dataStore = AppDataStore.dataStore
 
-    private object Keys {
-        val SERVERURL = stringPreferencesKey("serverUrl")
+    private class Keys {
+        companion object {
+            val SERVERURL = stringPreferencesKey("serverUrl")
+        }
     }
 
     val serverURLFlow: Flow<String> = dataStore.data.map { preferences ->

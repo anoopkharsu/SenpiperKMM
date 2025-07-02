@@ -3,7 +3,7 @@ package com.example.shared.network
 import com.example.shared.models.SPResult
 import com.senpiper.android.network.KtorClientFactory
 
-object KMMSPNetwork {
+class KMMSPNetwork private constructor() {
 
     private val client = KtorClientFactory().createClient()
     private var ktorService: KtorService? = null
@@ -18,5 +18,9 @@ object KMMSPNetwork {
 
     suspend fun fetchCompanyConfig(domainName: String): SPResult {
         return getService().fetchCompanyConfig(domainName)
+    }
+
+    companion object {
+        val instance: KMMSPNetwork by lazy { KMMSPNetwork() }
     }
 } 
