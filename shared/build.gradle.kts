@@ -11,7 +11,8 @@ plugins {
     id("org.jetbrains.compose") version "1.6.10"
 
 }
-
+group = "com.senpiper.shared"
+version = "1.0.0"
 android {
     namespace = "com.example.shared"
     compileSdk = 34
