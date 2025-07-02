@@ -84,7 +84,7 @@ kotlin {
                 implementation(libs.ktor.client.core)
                 implementation(libs.ktor.client.content.negotiation)
                 implementation(libs.ktor.serialization.kotlinx.json)
-
+                implementation(libs.datastore.preferences)
 
 
                 implementation("org.jetbrains.compose.runtime:runtime:1.6.10")
