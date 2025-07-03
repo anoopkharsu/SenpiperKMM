@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.map
 
 class UserDefaults {
     // Get the DataStore instance from our singleton
-    private val dataStore = AppDataStore.dataStore
+    private val dataStore = AppDataStore.instance
 
     private class Keys {
         companion object {
@@ -15,17 +15,17 @@ class UserDefaults {
         }
     }
 
-    val serverURLFlow: Flow<String> = dataStore.data.map { preferences ->
+    val serverURLFlow: Flow<String> = dataStore.dataStore.data.map { preferences ->
         preferences[Keys.SERVERURL] ?: "Guest"
     }
 
     suspend fun saveServerURL(url: String) {
-        dataStore.edit { preferences ->
+        dataStore.dataStore.edit { preferences ->
             preferences[Keys.SERVERURL] = url
         }
     }
 
     suspend fun clearAll() {
-        dataStore.edit { it.clear() }
+        dataStore.dataStore.edit { it.clear() }
     }
 }

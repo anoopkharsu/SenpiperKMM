@@ -2,9 +2,7 @@ package com.example.shared.preferences
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
-import okio.Path.Companion.toPath
 import platform.Foundation.NSDocumentDirectory
-import platform.Foundation.NSFileManager
 import platform.Foundation.NSSearchPathForDirectoriesInDomains
 import platform.Foundation.NSUserDomainMask
 

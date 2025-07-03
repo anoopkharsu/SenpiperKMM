@@ -3,8 +3,6 @@ package com.example.shared.preferences
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
-import androidx.datastore.preferences.preferencesDataStoreFile
-import okio.Path.Companion.toPath
 
 private const val SETTINGS_FILE_NAME = "app_settings.preferences_pb"
 private lateinit var dataStoreInstance: DataStore<Preferences>
