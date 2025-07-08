@@ -7,8 +7,8 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.room)
     alias(libs.plugins.serlization)
-    id("org.jetbrains.kotlin.plugin.compose") version "2.0.0"
-    id("org.jetbrains.compose") version "1.6.10"
+//    id("org.jetbrains.kotlin.plugin.compose") version "2.0.0"
+//    id("org.jetbrains.compose") version "1.6.10"
 
 }
 group = "com.senpiper.shared"
@@ -20,9 +20,9 @@ android {
         minSdk = 24
     }
 
-    buildFeatures {
-        compose = true
-    }
+//    buildFeatures {
+//        compose = true
+//    }
     composeOptions {
 
         kotlinCompilerExtensionVersion = "1.6.0"
@@ -88,11 +88,11 @@ kotlin {
                 implementation(libs.datastore.preferences)
 
 
-                implementation("org.jetbrains.compose.runtime:runtime:1.6.10")
-                implementation("org.jetbrains.compose.foundation:foundation:1.6.10")
-                implementation("org.jetbrains.compose.material3:material3:1.6.10")
-                implementation("org.jetbrains.compose.ui:ui:1.6.10")
-                implementation("org.jetbrains.compose.components:components-resources:1.6.10")
+//                implementation("org.jetbrains.compose.runtime:runtime:1.6.10")
+//                implementation("org.jetbrains.compose.foundation:foundation:1.6.10")
+//                implementation("org.jetbrains.compose.material3:material3:1.6.10")
+//                implementation("org.jetbrains.compose.ui:ui:1.6.10")
+//                implementation("org.jetbrains.compose.components:components-resources:1.6.10")
             }
         }
 
